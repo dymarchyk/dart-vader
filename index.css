@@ -1,0 +1,238 @@
+:root {
+    --accent: #FFC700;
+    --primaryText: #fff;
+    --secondartText: #1F1C1C;
+}
+
+body{
+    font-size: 16px;
+    color: var(--primaryText);
+    background: #222527;
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+    min-width: 320px;
+}
+p{
+    margin: 0;
+    padding: 0;
+}
+.btn{
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: .2s;
+    font-size: 18px;
+}
+
+.btn-primary{
+    background: var(--accent);
+    color: var(--secondartText)
+}
+.container{
+    max-width: 1360px;
+    width: 100%;
+    margin: 0 auto;
+}
+.logo{
+    color: var(--accent)
+}
+.theme-toggle{
+    display: flex;
+    align-items: center;
+}
+.theme-toggle svg{
+    margin: 0 5px;
+    cursor: pointer;
+}
+.main-header{
+    padding: 30px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main-section{
+    min-height: 100vh;
+    background: var(--secondartText) url("img/darth-vader.png") no-repeat center fixed;
+    background-size: cover;
+
+}
+
+.slogan-wrapper{
+    margin-top: 70px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+}
+
+.socials{
+    display: flex;
+    flex-direction: column;
+    color: var(--accent);
+    margin-top: 60px;
+}
+.socials a {
+    color: currentColor;
+    display: block;
+    margin-bottom: 16px;
+    transition: opacity .2s;
+}
+
+.socials a:hover{
+    opacity: .8;
+}
+
+.slogan-content h1{
+    line-height: 60px;
+    font-size: 46px;
+    font-weight: 700;
+    color: var(--accent);
+    margin-top: 60px;
+    margin-bottom: 80px;
+    letter-spacing: 2px;
+    font-style: italic;
+}
+.slogan-content .btn-primary{
+    padding: 16px 60px;
+    border-radius: 24px;
+    line-height: 24px;
+    margin-top: 44px;
+}
+.slogan-content .btn-primary:hover{
+    opacity: .8;
+}
+.slogan-content ul{
+    margin-top: 60px;
+}
+ul{
+    padding-left: 0;
+    list-style-type: none;
+    margin: 0;
+}
+
+ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+ul li:before{
+    display: block;
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: var(--accent);
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.main-section-footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 120px;
+}
+
+.main-section-footer p {
+    line-height: 24px;
+}
+
+.achievement-section{
+    background: #222527;
+    padding: 60px 0;
+}
+
+.achievement-section h2{
+    color: var(--accent);
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 500;
+    margin-bottom: 60px;
+}
+
+.achievements{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 16px;
+}
+
+.achievement p{
+    line-height: 24px;
+}
+.achievement {
+    cursor: pointer;
+}
+
+.achievement:hover .achievement-text,
+.achievement.active .achievement-text {
+    opacity: 1;
+    transform: translateY(0);
+}
+.achievement img{
+    display: block;
+    height: 60px;
+}
+.achievement-caption{
+    margin-top: 50px;
+    margin-bottom: 12px;
+    color: var(--accent);
+}
+
+.achievement-text {
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: .2s;
+}
+
+.codex{
+    background-size: cover;
+    background: url("img/space.jpg") no-repeat fixed center;
+    background-size: cover;
+    padding: 180px 0;
+}
+
+.codex-content{
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+}
+
+.codex-content h2{
+    color: var(--accent);
+    font-style: italic;
+    font-weight: 700;
+    font-size: 46px;
+    line-height: 60px;
+    letter-spacing: 0.02em;
+}
+
+.codex-content h3{
+    color: var(--accent);
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+
+.codex-content p {
+    line-height: 24px;
+    margin-bottom: 8px;
+}
+
+.codex-content p:last-of-type{
+    margin-top: 60px;
+}
+
+footer{
+    padding: 60px 0;
+    text-align: center;
+    background: var(--secondartText);
+}
+
+footer p {
+    line-height: 24px;
+}
+
+footer img {
+    display: block;
+    margin: 20px auto 0;
+}
