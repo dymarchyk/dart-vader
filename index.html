@@ -51,7 +51,7 @@
                         <li data-wow-delay="5s" class="animate__animated animate__fadeInLeft wow">Верховный генерал</li>
                     </ul>
 
-                    <button class="btn btn-primary animate__animated animate__fadeIn wow" data-wow-delay="6s">
+                    <button onclick="openModal()" class="btn btn-primary animate__animated animate__fadeIn wow" data-wow-delay="6s">
                         Принести клятву верности
                     </button>
                 </div>
@@ -172,6 +172,39 @@
             <img src="img/icons/at-at.svg" alt="">
         </div>
     </footer>
+
+    <div id="subscribe" class="modal">
+            <div class="modal-content animate__animated" >
+                <button class="close" onclick="closeModal()">
+                    <img alt="close" src="img/icons/close-icon.svg">
+                </button>
+                <div class="first-step">
+                    <h3>Принесение клятвы верности</h3>
+                    <p>избавит тебя от обуз морали и этики</p>
+
+                    <form class="form" action="#">
+                        <label>
+                            <span>Имя</span>
+                            <input required name="name"  type="text">
+                        </label>
+                        <label>
+                            <span>Email</span>
+                            <input required name="email"  type="email">
+                        </label>
+
+                        <button type="submit" class="btn btn-primary">Принести клятву</button>
+                    </form>
+                </div>
+               <div class="second-step hidden">
+                   <h3>Клятва принесена</h3>
+                    <p class="text-success">
+                        Ожидайте прибытия космического челнока для переброски в центр обучения и подготовки ситхов.
+                    </p>
+
+                   <img class="img" src="img/icons/tie-fighter.svg" alt="tie fighter">
+               </div>
+            </div>
+    </div>
 </main>
 
 

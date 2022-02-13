@@ -28,7 +28,8 @@ p{
 
 .btn-primary{
     background: var(--accent);
-    color: var(--secondartText)
+    color: var(--secondartText);
+    border-radius: 24px;
 }
 .container{
     max-width: 1360px;
@@ -95,7 +96,6 @@ p{
 }
 .slogan-content .btn-primary{
     padding: 16px 60px;
-    border-radius: 24px;
     line-height: 24px;
     margin-top: 44px;
 }
@@ -235,4 +235,115 @@ footer p {
 footer img {
     display: block;
     margin: 20px auto 0;
+}
+body.no-scroll{
+    overflow: hidden;
+}
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    z-index: -300;
+    transition: .4s;
+}
+
+.modal.active{
+    transition: .2s;
+    opacity: 1;
+    z-index: 3000;
+}
+
+.modal-content{
+    position: relative;
+    background: #222527;
+    max-width: 600px;
+    width: 100%;
+    min-height: 400px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px 10px rgba(255,255,255, .1);
+    padding: 30px 12px 0;
+}
+.modal-content h3{
+    color: var(--accent);
+    font-weight: 700;
+    line-height: 24px;
+    margin-bottom: 8px;
+    text-align: center;
+}
+.modal-content .close{
+    all: unset;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    transition: .2s;
+    transform: rotate(0);
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 30;
+    transform-origin: center;
+}
+.modal-content .close:hover{
+    transform: rotate(90deg);
+}
+.modal-content p {
+    text-align: center;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    margin: 30px auto;
+    align-items: center;
+    justify-content: center;
+    padding: 0 80px;
+}
+.form label{
+    display: flex;
+    margin-bottom: 8px;
+    flex-direction: column;
+    width: 100%;
+}
+.form label span{
+    line-height: 24px;
+}
+.form label input {
+    width: 100%;
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    transition: .2s;
+    height: 40px;
+    padding: 0 12px;
+    border-radius: 0;
+    outline: none;
+}
+
+.form label input:hover,
+.form label input:focus{
+    border-color: var(--accent);
+    border-radius: 0;
+    outline: none;
+}
+
+.form .btn-primary{
+    padding: 16px 30px;
+    margin-top: 30px;
+}
+.text-success{
+    margin-top: 120px;
+}
+.img{
+    display: block;
+    margin: 30px auto;
+}
+
+.hidden {
+    display: none !important;
 }
